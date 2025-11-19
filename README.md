@@ -16,6 +16,15 @@ The basic documentation pages can be found under `./input/docs`. The directory s
 
 The Cake site contains a blog where important announcements and other relevant information are posted. The blog posts can be found under `./input/blog`. As with documentation pages, blog posts are written in Markdown. The file name for each blog post contains its published date in the format `YYYY-MM-DD-title.md`.
 
+### RSS Feed
+
+The blog provides RSS and Atom feeds that are automatically generated during the site build process. Users can subscribe to blog updates using these feeds:
+
+- **RSS Feed**: `https://cakebuild.net/blog/feed/rss/index.xml`
+- **Atom Feed**: `https://cakebuild.net/blog/feed/atom/index.xml`
+
+The feeds are configured in `config.wyam` and include all published blog posts with standard metadata (title, link, description, publication date, and author). The feeds are automatically updated whenever the site is rebuilt with new blog posts.
+
 ## Extensions
 
 > PLEASE NOTE: Extension authors do not have to manually create YAML files as there is an automated process that scans nuget.org twice per day to find all extensions that follow the recommended naming convention (which is `Cake.xxx` for addins and `Cake.xxx.Module` for modules, where xxx describes the functionality provided by the extension) and generates the appropriate YAML content based on the metadata for the NuGet package.
